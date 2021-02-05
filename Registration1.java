@@ -19,7 +19,7 @@ public class Registration1 extends javax.swing.JFrame {
 
    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -83,6 +83,7 @@ public class Registration1 extends javax.swing.JFrame {
 
         jLabel12.setText("State :");
 
+        Uid.setText("IF ALREADY REGISTERED PLEASE LOG IN");
         Uid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 UidActionPerformed(evt);
@@ -313,21 +314,21 @@ public class Registration1 extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void UidActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UidActionPerformed
+    private void UidActionPerformed(java.awt.event.ActionEvent evt) {                                    
 
-    }//GEN-LAST:event_UidActionPerformed
+    }                                   
 
-    private void LnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LnameActionPerformed
+    private void LnameActionPerformed(java.awt.event.ActionEvent evt) {                                      
 
-    }//GEN-LAST:event_LnameActionPerformed
+    }                                     
 
-    private void pinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pinActionPerformed
+    private void pinActionPerformed(java.awt.event.ActionEvent evt) {                                    
 
-    }//GEN-LAST:event_pinActionPerformed
+    }                                   
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String ID=Uid.getText();
         String PASS=pwd.getText();
         String Mail=Email.getText();
@@ -389,29 +390,29 @@ public class Registration1 extends javax.swing.JFrame {
             System.out.println(ex.getMessage());
         }
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }                                        
 
-    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
+    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {                                      
         Login li=new Login();
         li.setVisible(true);
         this.hide();
-    }//GEN-LAST:event_LoginActionPerformed
+    }                                     
 
-    private void pwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdActionPerformed
+    private void pwdActionPerformed(java.awt.event.ActionEvent evt) {                                    
         // TODO add your handling code here:
-    }//GEN-LAST:event_pwdActionPerformed
+    }                                   
 
-    private void stateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stateActionPerformed
+    private void stateActionPerformed(java.awt.event.ActionEvent evt) {                                      
         // TODO add your handling code here:
-    }//GEN-LAST:event_stateActionPerformed
+    }                                     
 
-    private void CountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CountryActionPerformed
+    private void CountryActionPerformed(java.awt.event.ActionEvent evt) {                                        
         // TODO add your handling code here:
-    }//GEN-LAST:event_CountryActionPerformed
+    }                                       
 
-    private void queActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_queActionPerformed
+    private void queActionPerformed(java.awt.event.ActionEvent evt) {                                    
         // TODO add your handling code here:
-    }//GEN-LAST:event_queActionPerformed
+    }                                   
 
     /**
      * @param args the command line arguments
@@ -425,7 +426,7 @@ public class Registration1 extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JTextArea Addr;
     private javax.swing.JPasswordField ConfirmPassword;
     private javax.swing.JComboBox<String> Country;
@@ -460,5 +461,5 @@ public class Registration1 extends javax.swing.JFrame {
     private javax.swing.JPasswordField pwd;
     private javax.swing.JComboBox<String> que;
     javax.swing.JComboBox<String> state;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
