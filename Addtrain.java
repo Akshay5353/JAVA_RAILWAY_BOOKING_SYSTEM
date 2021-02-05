@@ -17,10 +17,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/**
- *
- * @author hp
- */
+
 public class Addtrain extends javax.swing.JFrame {
 
    
@@ -82,7 +79,7 @@ public class Addtrain extends javax.swing.JFrame {
     
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -270,9 +267,9 @@ public class Addtrain extends javax.swing.JFrame {
 
         pack();
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         String TrainNO = tno.getText();
         String Tname = tname.getText();
         String Start = tstart.getText();
@@ -308,9 +305,9 @@ public class Addtrain extends javax.swing.JFrame {
             Logger.getLogger(Addtrain.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }                                        
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         
         String TrainNO = tno.getText();
         String Tname = tname.getText();
@@ -350,9 +347,9 @@ public class Addtrain extends javax.swing.JFrame {
             Logger.getLogger(Addtrain.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }                                        
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
          String TrainNO = tno.getText();
         try {
             ps=con.prepareStatement("delete from details where tno= ?   ");
@@ -373,27 +370,28 @@ public class Addtrain extends javax.swing.JFrame {
             tdestination.setText("");
             tprice.setText("");
             tno.requestFocus();
-            jButton3.setEnabled(true);
+            jButton3.setEnabled(false);
             Train_Details();
         } 
         
         catch (SQLException ex) {
             Logger.getLogger(Addtrain.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }                                        
 
-    private void tnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tnameActionPerformed
-
-    private void tnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tnoActionPerformed
+    private void tnameActionPerformed(java.awt.event.ActionEvent evt) {                                      
         
-    }//GEN-LAST:event_tnoActionPerformed
+    }                                     
 
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+    private void tnoActionPerformed(java.awt.event.ActionEvent evt) {                                    
+        
+    }                                   
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {                                     
         
         DefaultTableModel d= (DefaultTableModel)jTable1.getModel();
         int selectindex = jTable1.getSelectedRow();
+        
         
         tno.setText(d.getValueAt(selectindex,0).toString());
         tname.setText(d.getValueAt(selectindex,1).toString());
@@ -401,44 +399,21 @@ public class Addtrain extends javax.swing.JFrame {
         tdestination.setText(d.getValueAt(selectindex,3).toString());
         tprice.setText(d.getValueAt(selectindex,4).toString());
         
-        jButton3.setEnabled(false);
+        jButton3.setEnabled(true);
         
-    }//GEN-LAST:event_jTable1MouseClicked
+    }                                    
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         
         jButton3.setEnabled(true);
         Train_Details(); 
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }                                        
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Addtrain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Addtrain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Addtrain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Addtrain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Addtrain().setVisible(true);
@@ -446,7 +421,7 @@ public class Addtrain extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -465,5 +440,5 @@ public class Addtrain extends javax.swing.JFrame {
     private javax.swing.JTextField tno;
     private javax.swing.JTextField tprice;
     private javax.swing.JTextField tstart;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
